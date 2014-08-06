@@ -17,6 +17,7 @@ if(isset($_POST['Login']))
 	$dsn = 'mysql:dbname='.DB_NAME.';host='.DB_HOST.';port='.DB_PORT;
 	//$dbh = new PDO($dsn, DB_USER, DB_PASS);
 
+	$error ="<span class='alert alert-success'>\n".$dsn."  ++ ".DB_USER." ++ ".DB_PASS." </span>";
 	if($username=='' and $password=='')
 	{
 		$error = "<br><span class='error'>Fill All fields Please \n".$dsn."  ++ ".DB_USER." ++ ".DB_PASS." </span>";
